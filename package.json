@@ -1,0 +1,24 @@
+{
+  "name": "backend-encanto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saramagagnin/backend-encanto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saramagagnin/backend-encanto/issues"
+  },
+  "homepage": "https://github.com/saramagagnin/backend-encanto#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
