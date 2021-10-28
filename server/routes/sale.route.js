@@ -44,5 +44,29 @@ router.put('/sale/:id', async (req, res) => {
     }
 });
 
+router.delete('/sale/:id', async (req, res) => {
+    const id = Number(req.params.id);
+    try {
+        const deleteSale = await Sale.findOneAndDelete({ id: id });
+        if (deleteSale) {
+            res.status(200).send({
+                message: 'Sale successfully deleted',
+                status: 200
+            })
+        } else {
+            res.status(404).send({
+                message: 'Sale not found',
+                status: 404
+            })
+        }
+
+    } catch (error) {
+        res.status(400).send({
+            errorMessage: error.message,
+            status: 400
+        });
+    }
+});
+
 module.exports = router;
 
