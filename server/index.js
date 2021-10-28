@@ -5,11 +5,13 @@ const saleRouter = require('./routes/sale.route')
 require('./database/mongoose.config')
 const app = express()
 const port = 3005
-
+const cors = require('cors');
+app.use(cors('*'))
 app.use(express.json())
 app.use(userRouter)
 app.use(productRouter)
 app.use(saleRouter)
+
 
 app.listen(port, () => {
     console.log(`Encanto server listening at http://localhost:${port}`)
