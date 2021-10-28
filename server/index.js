@@ -4,7 +4,7 @@ const productRouter = require('./routes/product.route')
 const saleRouter = require('./routes/sale.route')
 require('./database/mongoose.config')
 const app = express()
-const port = 3000
+const port = 3005
 
 app.use(express.json())
 app.use(userRouter)
